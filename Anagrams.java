@@ -8,10 +8,10 @@
  * respond to it.
  *
  * The third feature builds/add on to the game by adding a shuffle JButton
- * button similar to the iconic Pigeon-game Anagrams (lines %%). It shuffled the
- * position of the x coordinates of the letter's JButton by either reverse their
- * order, shifting it to the right by one, and ... left by one through a void
- * method.
+ * button similar to the iconic Pigeon-game Anagrams (lines %%). It shuffles the
+ * position of the x coordinates of the letter's JButton by either reversing
+ * their order, shifting it to the right by one, and ... left by one through a
+ * void method.
  * */
 
 import javax.swing.JButton;
