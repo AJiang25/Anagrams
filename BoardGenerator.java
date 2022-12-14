@@ -12,6 +12,7 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+// Feature 1: Generates a Board
 public class BoardGenerator {
     protected final int MAXTIME = 80; // The max time for the game
     protected static final int POINTS = 200; // Points awarded per character
@@ -36,7 +37,6 @@ public class BoardGenerator {
         words = new ArrayList<String>();
     }
 
-    // Feature 1:
     // Generates a random word; A private Helper Method
     private ArrayList<String> randomWord() {
         String possibleLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
