@@ -14,7 +14,9 @@ import java.util.Scanner;
 
 public class BoardGenerator {
     protected final int MAXTIME = 80; // The max time for the game
-    private static final int POINTS = 200; // Points awarded per character
+    protected static final int POINTS = 200; // Points awarded per character
+    protected static final int ALPHABET = 26; // # of letters in the alphabet
+    protected static final int MAXLENGTH = 6; // max word length
 
     // protected instance variables (for subclass inheritance)
     protected int score; // Maintains the amount of points a player has
@@ -37,22 +39,17 @@ public class BoardGenerator {
     // Feature 1:
     // Generates a random word; A private Helper Method
     private ArrayList<String> randomWord() {
-        randomWord = new ArrayList<String>();
         String possibleLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        int counter = 0;
-        int usedNumbers[] = { 27, 27, 27, 27, 27, 27 };
+        randomWord = new ArrayList<String>();
+        boolean[] usedNumbers = new boolean[ALPHABET];
 
-        // Prevents the production of Duplicate Letters
-        while (randomWord.size() != 6) {
-            int random = (int) (Math.random() * 26);
-            for (int i = 0; i < 5; i++) {
-                if (usedNumbers[i] == random) break;
-                else if (i == 4) {
-                    String letter = possibleLetters.substring(random, random + 1);
-                    randomWord.add(letter);
-                    usedNumbers[counter] = random;
-                    counter++;
-                }
+        // prevents the creation of duplicate words
+        while (randomWord.size() != MAXLENGTH) {
+            int random = (int) (Math.random() * ALPHABET);
+            if (!usedNumbers[random]) {
+                char letter = possibleLetters.charAt(random);
+                randomWord.add(String.valueOf(letter));
+                usedNumbers[random] = true;
             }
         }
         // Checks validity of word & calls itself if the word is invalid;
@@ -60,6 +57,7 @@ public class BoardGenerator {
             return randomWord;
         }
         return randomWord();
+
     }
 
     // The following are get methods:
@@ -131,7 +129,6 @@ public class BoardGenerator {
 
     // Test that ensures that the board created is valid
     public boolean isBoardValid() {
-        final int MAXLENGTH = 6; // The maximum word length
         String word = this.getRandomWord();
         if (isRandomWordValid(word)
                 && word.length() == MAXLENGTH && this.getCurrentWord().length() == 0
