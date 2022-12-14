@@ -32,9 +32,11 @@ Final Project
  *      with University regulations.  /s/ Alan Turing
  ******************************************************************************/
 
-[write and sign the pledge here]
+This programming assignment represents my own work in accordance with University
+regulations. /s/ Arnold Jiang
 
-
+This programming assignment represents my own work in accordance with University
+regulations. /s/ Diego Rubio Garcia
 
 /******************************************************************************
  *  If you worked with a partner, did you and your partner adhere to the
@@ -43,3 +45,4 @@ Final Project
  ******************************************************************************/
 
 YES / NO / NA
+YES
