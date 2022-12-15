@@ -12,7 +12,7 @@ advisor: Gianluca Bencomo
 * Your project title
 title: Anagrams
 * The link to the youtube video with your video presentation
-youtube_link: <text>
+youtube_link: https://youtu.be/m8NJxLbpIkM
 * A list of comma separated tags that describe your project
 * The list of possible tags is: game, data analysis/visualization, library, algorithms, assignment extension, application, misc
 * An example would be 'tags: data analysis/visualization, application'
