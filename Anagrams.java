@@ -1,4 +1,4 @@
-/*
+ /*
   * This file contains the second and third feature of our project called
   * Anagrams.
   *
@@ -10,8 +10,8 @@
   * The third feature builds/add on to the game by adding a shuffle JButton
   * button similar to the iconic Pigeon-game Anagrams (shuffle method, JButton
   * in construction). It shuffles the position of the x coordinates of the
-  * letter's JButton by either reverse their order, shifting it to the right by
-  * one, and ... left by one through a void method.
+  * letter's JButton by either reversing their order, shifting them to the right
+  *  by one, and ... left by one through a void method.
   */
 
  import javax.swing.JButton;
@@ -27,8 +27,8 @@
 
  public class Anagrams extends JPanel {
 
-     // magic number that is the distance: the start to middle of all square-like
-     // shapes
+     // magic number that is the distance: the start to middle of all square -
+     // like shapes
      private static final int CENTER = 15;
      // magic number that is the distance: the start to the end of all
      // square-like shapes
@@ -45,7 +45,8 @@
      private static final int DISPLAYCENTER = 135;
      private static final int DISPLAYLENGTH = 250;
      private static final int DISPLAYHEIGHT = 50;
-     // magic number for the timer centering & letter dimension (length x height)
+     // magic number for the timer centering & letter dimension
+     // (length x height)
      private static final int TIMERCENTER = 430;
      private static final int LETTERDIMENSIONS = 100;
 
@@ -87,7 +88,8 @@
          JLabel lettersLabel5 = new JLabel("");
 
          // basic JFrame set up (creating, setting canvas size, etc.)
-         // 540 represents half the length of a laptop screen, and 680 the height
+         // 540 represents half the length of a laptop screen, and 680 the
+         // height
          JFrame frame = new JFrame();
          frame.setSize(540, 680);
          frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -118,7 +120,8 @@
                                     DISPLAYLENGTH, DISPLAYHEIGHT);
          panel.add(scoreKeeperLabel);
 
-         // the 15 is the height, 100 is the length, and 50 is width of the label
+         // the 15 is the height, 100 is the length, and 50 is width of the
+         // label
          timerLabel.setFont(OUTPUTFONT);
          timerLabel.setText("Time: " + board.MAXTIME);
          timerLabel.setBounds(TIMERCENTER, 15, 100, 50);
@@ -149,7 +152,8 @@
          JButton enter = new JButton("Enter");
          JButton shuffle = new JButton("S");
 
-         // sets up the Action Listener and ties it with their appropriate method
+         // sets up the Action Listener and ties it with their appropriate
+         // method
          button0.addActionListener(e -> buttonPressed(0));
          button1.addActionListener(e -> buttonPressed(1));
          button2.addActionListener(e -> buttonPressed(2));
@@ -223,7 +227,7 @@
 
                  // these are the test that must be done for debugging purposes:
                  if (testing) {
-                     // test the X methods produce the values : y = 85x + 15 
+                     // test the X methods produce the values : y = 85x + 15
                      // (0<x<6). Clone will be used to test shuffle
                      fillXCord(CENTER, SEPERATION);
                      int[] clone = new int[TILES];
@@ -232,7 +236,7 @@
                          StdOut.print(xCord[i] + " ");
                      }
                      StdOut.println();
-                     // test the shuffle by comparing its clone to the now 
+                     // test the shuffle by comparing its clone to the now
                      // shuffled xCord by making a similarity test (should be
                      // 0)
                      shuffle();
@@ -250,14 +254,14 @@
                      StdOut.println("First letter: " + board.randomWord.get(0));
                      StdOut.println(store + lettersLabel0.getText());
 
-                     StdOut.println("Second letter: " + 
+                     StdOut.println("Second letter: " +
                                             board.randomWord.get(1));
                      StdOut.println(store + lettersLabel1.getText());
 
                      StdOut.println("Third letter: " + board.randomWord.get(2));
                      StdOut.println(store + lettersLabel2.getText());
 
-                     StdOut.println("Fourth letter: " + 
+                     StdOut.println("Fourth letter: " +
                                             board.randomWord.get(3));
                      StdOut.println(store + lettersLabel3.getText());
 
@@ -267,9 +271,9 @@
                      StdOut.println("Sixth letter: " + board.randomWord.get(5));
                      StdOut.println(store + lettersLabel5.getText());
 
-                     // test that is current word is observed. It will say this 
-                     // not a word, followed up by the current. In a real game, 
-                     // if current word is a genuine word, it will not say the 
+                     // test that is current word is observed. It will say this
+                     // not a word, followed up by the current. In a real game,
+                     // if current word is a genuine word, it will not say the
                      // first message
                      System.out.println("When enter is pressed: ");
                      StdOut.println(enterPressed());
