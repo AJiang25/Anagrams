@@ -12,7 +12,8 @@ public class AnagramClient {
         BoardGenerator board1 = new BoardGenerator();
         JFrame jr = new JFrame();
         String name = args[0];
-        Anagrams test1 = new Anagrams(board1, name, false);
+        boolean testing = Boolean.parseBoolean(args[1]);
+        Anagrams test1 = new Anagrams(board1, name, testing);
         jr.add(test1);
 
     }
