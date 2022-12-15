@@ -12,7 +12,7 @@ public class AnagramClient {
         BoardGenerator Board1 = new BoardGenerator();
         JFrame jr = new JFrame();
         String name = args[0];
-        Anagrams Test1 = new Anagrams(Board1, name);
+        Anagrams Test1 = new Anagrams(Board1, name, false);
         jr.add(Test1);
 
     }
