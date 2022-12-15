@@ -9,11 +9,11 @@ import java.io.FileNotFoundException;
 public class AnagramClient {
     // The Test Client
     public static void main(String[] args) throws FileNotFoundException {
-        BoardGenerator Board1 = new BoardGenerator();
+        BoardGenerator board1 = new BoardGenerator();
         JFrame jr = new JFrame();
         String name = args[0];
-        Anagrams Test1 = new Anagrams(Board1, name, false);
-        jr.add(Test1);
+        Anagrams test1 = new Anagrams(board1, name, false);
+        jr.add(test1);
 
     }
 }
